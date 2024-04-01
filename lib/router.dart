@@ -11,14 +11,12 @@ final GoRouter router = GoRouter(
       builder: (BuildContext context, GoRouterState state) {
         return const Home();
       },
-      routes: <RouteBase>[
-        GoRoute(
-          path: 'exercises',
-          builder: (BuildContext context, GoRouterState state) {
-            return const Exercises();
-          },
-        ),
-      ],
     ),
+    GoRoute(
+      path: '/exercises',
+      builder: (BuildContext context, GoRouterState state) {
+        return const Exercises();
+      },
+    )
   ],
 );
