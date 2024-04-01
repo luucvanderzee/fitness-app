@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'screens/home.dart';
-import 'screens/routine.dart';
+import 'screens/exercises.dart';
 
 final GoRouter router = GoRouter(
   routes: <RouteBase>[
@@ -13,9 +13,9 @@ final GoRouter router = GoRouter(
       },
       routes: <RouteBase>[
         GoRoute(
-          path: 'routine',
+          path: 'exercises',
           builder: (BuildContext context, GoRouterState state) {
-            return const Routine();
+            return const Exercises();
           },
         ),
       ],
