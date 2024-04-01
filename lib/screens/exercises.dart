@@ -7,12 +7,24 @@ class Exercises extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: TopBar(title: 'Exercises'),
-      body: Center(
-        child: Text('Here you will be able to manage exercises'),
+    return Scaffold(
+      appBar: const TopBar(title: 'Exercises'),
+      body: ListView(
+        padding: const EdgeInsets.all(12),
+        children: const [
+          Text('Item 1', style: TextStyle(fontSize: 20)),
+          Text('Item 2', style: TextStyle(fontSize: 20)),
+        ],
       ),
-      drawer: DrawerMenu(),
+      drawer: const DrawerMenu(),
+      floatingActionButton: FloatingActionButton.extended(
+        label: const Text(
+          'Add exercise',
+          style: TextStyle(fontSize: 20),
+        ),
+        icon: const Icon(Icons.add),
+        onPressed: () {},
+      ),
     );
   }
 }
